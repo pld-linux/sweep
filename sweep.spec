@@ -17,7 +17,6 @@ Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/sweep/%{name}-%{version}.tar.gz
 # Source0-md5:	2b9ee0529c666f80b362aeefae28b891
 Patch0:		%{name}-desktop.patch
-Patch1:		%{name}-alsa10.patch
 URL:		http://sweep.sourceforge.net/
 %{?with_alsa:BuildRequires:	alsa-lib-devel >= 1.0.0}
 BuildRequires:	autoconf
