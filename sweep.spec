@@ -5,6 +5,9 @@
 # _without_speex	- build without speex audio codec support
 # _without_vorbis	- build without oggvorbis audio codec
 #
+# TODO:
+# - correct .po intl files (add charset/encoding fileds) 
+#
 Summary:	Audio editor and live playback tool
 Summary(pl):	Edytor d¼wiêku i narzêdzie do otwarzania na ¿ywo
 Name:		sweep
