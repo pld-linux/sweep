@@ -1,4 +1,4 @@
-# 
+#
 # Conditional build
 # _with_alsa		- build with alsa support
 # _without_mad		- build without mp3 support
@@ -6,7 +6,7 @@
 # _without_vorbis	- build without oggvorbis audio codec
 #
 # TODO:
-# - correct .po intl files (add charset/encoding fileds) 
+# - correct .po intl files (add charset/encoding fileds)
 #
 Summary:	Audio editor and live playback tool
 Summary(pl):	Edytor d¼wiêku i narzêdzie do odtwarzania na ¿ywo
@@ -76,7 +76,7 @@ rm -f missing
 	%{?_without_mad:--disable-mad} \
 	%{?_without_speex:--disable-speex} \
 	%{?_without_vorbis:--disable-oggvorbis}
-	
+
 %{__make}
 
 %install
