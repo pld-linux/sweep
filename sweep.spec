@@ -49,11 +49,11 @@ Summary(pl):	Zestaw deweloperski dla wtyczek Sweepa
 Group:		Applications/Sound
 # doesn't seem to require base
 
-%description    devel
+%description devel
 The sweep-devel package contains header files and documentation for
 writing plugins for Sweep.
 
-%description -l pl
+%description devel -l pl
 Pakiet sweep-devel zawiera pliki nag³ówkowe i dokumentacjê do pisania
 wtyczek dla Sweepa.
 
