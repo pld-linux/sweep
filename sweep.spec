@@ -9,7 +9,7 @@
 # - correct .po intl files (add charset/encoding fileds) 
 #
 Summary:	Audio editor and live playback tool
-Summary(pl):	Edytor d¼wiêku i narzêdzie do otwarzania na ¿ywo
+Summary(pl):	Edytor d¼wiêku i narzêdzie do odtwarzania na ¿ywo
 Name:		sweep
 Version:	0.8.2
 Release:	1
@@ -41,8 +41,7 @@ It supports audio filter plugins from the LADSPA project.
 %description -l pl
 Sweep jest edytorem próbek d¼wiêkowych. Operuje na plikach ró¿nych
 formatów i posiada wielokrotne poziomy cofania/przywracania oraz
-filtry.
-Wspiera wytczki d¼wiêkowe z projektu LADSPA.
+filtry. Obs³uguje wtyczki d¼wiêkowe z projektu LADSPA.
 
 %package devel
 Summary:	Sweep plugin development kit
@@ -109,16 +108,18 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc NEWS README ChangeLog README.ALSA
 %attr(755,root,root) %{_bindir}/*
+%dir %{_libdir}/sweep
 %{_libdir}/sweep/lib*.so.*
 %{_mandir}/man1/*
 %{_pixmapsdir}/sweep.png
+%dir %{_datadir}/sweep
 %{_datadir}/sweep/sweep_logo.ppm
 %{_applnkdir}/Multimedia/%{name}.desktop
 
 %files devel
 %defattr(644,root,root,755)
 %doc doc/plugin_writers_guide.txt
-%{_includedir}/sweep/*.h
+%{_includedir}/sweep
 %{_libdir}/sweep/lib*.so
 
 %files static
