@@ -2,7 +2,7 @@
 # - correct .po intl files (add charset/encoding fileds)
 #
 # Conditional build:
-%bcond_without	mad		# build without mp3 support
+%bcond_without	mad		# build without MP3 support
 %bcond_without	speex		# build without speex audio codec support
 %bcond_without	vorbis		# build without oggvorbis audio codec
 %bcond_with	alsa		# build with alsa support
