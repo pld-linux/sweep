@@ -11,8 +11,8 @@ Summary:	Audio editor and live playback tool
 Summary(pl):	Edytor d¼wiêku i narzêdzie do odtwarzania na ¿ywo
 Name:		sweep
 Version:	0.8.3
-Release:	1
-License:	GPL
+Release:	2
+License:	GPL v2
 Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/sweep/%{name}-%{version}.tar.gz
 # Source0-md5:	2b9ee0529c666f80b362aeefae28b891
@@ -80,11 +80,11 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Multimedia
+install -d $RPM_BUILD_ROOT%{_desktopdir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	desktopdir=%{_applnkdir}/Multimedia
+	desktopdir=%{_desktopdir}
 
 # useless (loaded through libgmodule by SONAME)
 rm -f $RPM_BUILD_ROOT%{_libdir}/sweep/lib*.{la,a}
@@ -103,7 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 %{_pixmapsdir}/sweep.png
 %{_datadir}/sweep
-%{_applnkdir}/Multimedia/%{name}.desktop
+%{_desktopdir}/%{name}.desktop
 
 %files devel
 %defattr(644,root,root,755)
