@@ -1,12 +1,11 @@
-#
-# Conditional build
-# _with_alsa		- build with alsa support
-# _without_mad		- build without mp3 support
-# _without_speex	- build without speex audio codec support
-# _without_vorbis	- build without oggvorbis audio codec
-#
 # TODO:
 # - correct .po intl files (add charset/encoding fileds)
+#
+# Conditional build:
+%bcond_without	mad		# build without mp3 support
+%bcond_without	speex		# build without speex audio codec support
+%bcond_without	vorbis		# build without oggvorbis audio codec
+%bcond_with	alsa		# build with alsa support
 #
 Summary:	Audio editor and live playback tool
 Summary(pl):	Edytor d¼wiêku i narzêdzie do odtwarzania na ¿ywo
@@ -19,7 +18,7 @@ Source0:	http://dl.sourceforge.net/sweep/%{name}-%{version}.tar.gz
 # Source0-md5:	cc2e9a8473861ceeeeb98ebf795a0ab2
 Patch0:		%{name}-desktop.patch
 URL:		http://sweep.sourceforge.net/
-%{?_with_alsa:BuildRequires:	alsa-lib-devel >= 0.9.0}
+%{?with_alsa:BuildRequires:	alsa-lib-devel >= 0.9.0}
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
@@ -27,9 +26,9 @@ BuildRequires:	gtk+-devel
 BuildRequires:	libsamplerate-devel >= 0.0.9
 BuildRequires:	libsndfile-devel >= 1.0.0
 BuildRequires:	libtool
-%{!?_without_vorbis:BuildRequires:	libvorbis-devel}
-%{!?_without_mad:BuildRequires:	libmad-devel}
-%{!?_without_speex:BuildRequires:	speex-devel}
+%{?with_vorbis:BuildRequires:	libvorbis-devel}
+%{?with_mad:BuildRequires:	libmad-devel}
+%{?with_speex:BuildRequires:	speex-devel}
 BuildRequires:	tdb
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -72,10 +71,10 @@ rm -f missing
 
 %configure \
 	--enable-experimental \
-	%{?_with_alsa:--enable-alsa} \
-	%{?_without_mad:--disable-mad} \
-	%{?_without_speex:--disable-speex} \
-	%{?_without_vorbis:--disable-oggvorbis}
+	%{?with_alsa:--enable-alsa} \
+	%{!?with_mad:--disable-mad} \
+	%{!?with_speex:--disable-speex} \
+	%{!?with_vorbis:--disable-oggvorbis}
 
 %{__make}
 
