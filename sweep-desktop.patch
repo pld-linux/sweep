@@ -1,0 +1,20 @@
+diff -aurN sweep-0.8.2.orig/sweep.desktop sweep-0.8.2/sweep.desktop
+--- sweep-0.8.2.orig/sweep.desktop	2003-04-27 07:37:14.000000000 +0200
++++ sweep-0.8.2/sweep.desktop	2003-07-25 20:01:42.000000000 +0200
+@@ -1,9 +1,13 @@
+ [Desktop Entry]
++Encoding=UTF-8
+ Name=Sweep
++Name[pl]=Sweep
+ Comment=Sound Editor
+-Encoding=Legacy-Mixed
+-Exec=sweep
++Comment[pl]=Edytor dźwięku
+ Icon=sweep.png
++Exec=/usr/bin/sweep
+ MimeType=audio/x-wav
+-Terminal=0
++Terminal=false
+ Type=Application
++Categories=Application;AudioVideo;
++# vi: encoding=utf-8
