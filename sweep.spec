@@ -6,7 +6,7 @@
 # _without_vorbis	- build without oggvorbis audio codec
 #
 Summary:	Audio editor and live playback tool
-Summary(pl):	Edytor d¼wiêku i ...
+Summary(pl):	Edytor d¼wiêku i narzêdzie do otwarzania na ¿ywo
 Name:		sweep
 Version:	0.8.2
 Release:	1
@@ -19,6 +19,7 @@ URL:		http://sweep.sourceforge.net/
 %{?_with_alsa:BuildRequires:	alsa-lib-devel >= 0.9.0}
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	libsamplerate-devel >= 0.0.9
 BuildRequires:	libsndfile-devel >= 1.0.0
