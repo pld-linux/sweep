@@ -28,7 +28,7 @@ BuildRequires:	libsamplerate-devel >= 0.0.9
 BuildRequires:	libsndfile-devel >= 1.0.0
 BuildRequires:	libtool
 %{!?_without_vorbis:BuildRequires:	libvorbis-devel}
-%{!?_without_mad:BuildRequires:	mad-devel}
+%{!?_without_mad:BuildRequires:	libmad-devel}
 %{!?_without_speex:BuildRequires:	speex-devel}
 BuildRequires:	tdb
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
