@@ -47,7 +47,7 @@ filtry. Obs³uguje wtyczki d¼wiêkowe z projektu LADSPA.
 Summary:	Sweep plugin development kit
 Summary(pl):	Zestaw deweloperski dla wtyczek Sweepa
 Group:		Applications/Sound
-Requires:	%{name} = %{version}
+# doesn't seem to require base
 
 %description    devel
 The sweep-devel package contains header files and documentation for
@@ -56,18 +56,6 @@ writing plugins for Sweep.
 %description -l pl
 Pakiet sweep-devel zawiera pliki nag³ówkowe i dokumentacjê do pisania
 wtyczek dla Sweepa.
-
-%package static
-Summary:	Sweep - static libraries
-Summary(pl):	Biblioteki statyczne Sweepa
-Group:		Applications/Sound
-Requires:	%{name}-devel = %{version}
-
-%description static
-The sweep-static package contains static libraries.
-
-%description -l pl
-Pakiet sweep-static zawiera biblioteki statyczne.
 
 %prep
 %setup -q
@@ -99,6 +87,9 @@ install -d $RPM_BUILD_ROOT%{_applnkdir}/Multimedia
 	DESTDIR=$RPM_BUILD_ROOT \
 	desktopdir=%{_applnkdir}/Multimedia
 
+# useless (loaded through libgmodule by SONAME)
+rm -f $RPM_BUILD_ROOT%{_libdir}/sweep/lib*.{so,la,a}
+
 %find_lang %{name} --all-name
 
 %clean
@@ -112,17 +103,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/sweep/lib*.so.*
 %{_mandir}/man1/*
 %{_pixmapsdir}/sweep.png
-%dir %{_datadir}/sweep
-%{_datadir}/sweep/sweep_logo.ppm
+%{_datadir}/sweep
 %{_applnkdir}/Multimedia/%{name}.desktop
 
 %files devel
 %defattr(644,root,root,755)
 %doc doc/plugin_writers_guide.txt
 %{_includedir}/sweep
-%{_libdir}/sweep/lib*.so
-
-%files static
-%defattr(644,root,root,755)
-%{_libdir}/sweep/lib*.a
-%{_libdir}/sweep/lib*.la
