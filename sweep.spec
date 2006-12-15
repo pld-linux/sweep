@@ -10,12 +10,12 @@
 Summary:	Audio editor and live playback tool
 Summary(pl):	Edytor d¼wiêku i narzêdzie do odtwarzania na ¿ywo
 Name:		sweep
-Version:	0.8.3
-Release:	2
+Version:	0.9.1
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Sound
-Source0:	http://dl.sourceforge.net/sweep/%{name}-%{version}.tar.gz
-# Source0-md5:	2b9ee0529c666f80b362aeefae28b891
+Source0:	http://dl.sourceforge.net/sweep/%{name}-%{version}.tar.bz2
+# Source0-md5:	7c346e28ff09c4a4f529a607ffd165f9
 Patch0:		%{name}-desktop.patch
 URL:		http://sweep.sourceforge.net/
 %{?with_alsa:BuildRequires:	alsa-lib-devel >= 1.0.0}
@@ -101,7 +101,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/sweep
 %{_libdir}/sweep/lib*.so
 %{_mandir}/man1/*
-%{_pixmapsdir}/sweep.png
+%{_pixmapsdir}/sweep.svg
 %{_datadir}/sweep
 %{_desktopdir}/%{name}.desktop
 
