@@ -8,7 +8,7 @@
 %bcond_with	alsa		# build with alsa support
 #
 Summary:	Audio editor and live playback tool
-Summary(pl):	Edytor d¼wiêku i narzêdzie do odtwarzania na ¿ywo
+Summary(pl.UTF-8):   Edytor dÅºwiÄ™ku i narzÄ™dzie do odtwarzania na Å¼ywo
 Name:		sweep
 Version:	0.9.1
 Release:	1
@@ -37,14 +37,14 @@ Sweep is an editor for sound samples. It operates on files of various
 formats and has multiple undo/redo levels and filters.
 It supports audio filter plugins from the LADSPA project.
 
-%description -l pl
-Sweep jest edytorem próbek d¼wiêkowych. Operuje na plikach ró¿nych
-formatów i posiada wielokrotne poziomy cofania/przywracania oraz
-filtry. Obs³uguje wtyczki d¼wiêkowe z projektu LADSPA.
+%description -l pl.UTF-8
+Sweep jest edytorem prÃ³bek dÅºwiÄ™kowych. Operuje na plikach rÃ³Å¼nych
+formatÃ³w i posiada wielokrotne poziomy cofania/przywracania oraz
+filtry. ObsÅ‚uguje wtyczki dÅºwiÄ™kowe z projektu LADSPA.
 
 %package devel
 Summary:	Sweep plugin development kit
-Summary(pl):	Zestaw deweloperski dla wtyczek Sweepa
+Summary(pl.UTF-8):   Zestaw deweloperski dla wtyczek Sweepa
 Group:		Applications/Sound
 # doesn't seem to require base
 
@@ -52,8 +52,8 @@ Group:		Applications/Sound
 The sweep-devel package contains header files and documentation for
 writing plugins for Sweep.
 
-%description devel -l pl
-Pakiet sweep-devel zawiera pliki nag³ówkowe i dokumentacjê do pisania
+%description devel -l pl.UTF-8
+Pakiet sweep-devel zawiera pliki nagÅ‚Ã³wkowe i dokumentacjÄ™ do pisania
 wtyczek dla Sweepa.
 
 %prep
