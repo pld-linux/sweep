@@ -8,7 +8,7 @@
 %bcond_with	alsa		# build with alsa support
 #
 Summary:	Audio editor and live playback tool
-Summary(pl.UTF-8):   Edytor dźwięku i narzędzie do odtwarzania na żywo
+Summary(pl.UTF-8):	Edytor dźwięku i narzędzie do odtwarzania na żywo
 Name:		sweep
 Version:	0.9.1
 Release:	1
@@ -44,7 +44,7 @@ filtry. Obsługuje wtyczki dźwiękowe z projektu LADSPA.
 
 %package devel
 Summary:	Sweep plugin development kit
-Summary(pl.UTF-8):   Zestaw deweloperski dla wtyczek Sweepa
+Summary(pl.UTF-8):	Zestaw deweloperski dla wtyczek Sweepa
 Group:		Applications/Sound
 # doesn't seem to require base
 
