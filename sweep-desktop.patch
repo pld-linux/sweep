@@ -1,17 +1,16 @@
-diff -urN sweep-0.9.1.orig/sweep.desktop sweep-0.9.1/sweep.desktop
---- sweep-0.9.1.orig/sweep.desktop	2006-12-15 14:00:53.000000000 +0100
-+++ sweep-0.9.1/sweep.desktop	2006-12-15 14:03:54.000000000 +0100
+--- sweep-0.9.2/sweep.desktop~	2008-03-26 23:01:35.000000000 +0100
++++ sweep-0.9.2/sweep.desktop	2008-03-26 23:05:39.000000000 +0100
 @@ -1,11 +1,14 @@
  [Desktop Entry]
  Name=Sweep
 +Name[pl]=Sweep
  GenericName=Sound Editor
  Comment=Sweep Sound Editor
+-Categories=Application;AudioVideo;
 +Comment[pl]=Edytor dźwięku
- Categories=Application;AudioVideo;
++Categories=GTK;Audio;Recorder;
  Encoding=UTF-8
--Exec=sweep
-+Exec=/usr/bin/sweep
+ Exec=sweep
  Icon=sweep.svg
  MimeType=audio/x-wav
  Terminal=false
