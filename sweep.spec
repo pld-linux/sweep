@@ -5,7 +5,7 @@
 %bcond_without	mad		# build without MP3 support
 %bcond_without	speex		# build without speex audio codec support
 %bcond_without	vorbis		# build without OggVorbis audio codec
-%bcond_with	alsa		# build with alsa support
+%bcond_without	alsa		# build with alsa support
 #
 Summary:	Audio editor and live playback tool
 Summary(pl.UTF-8):	Edytor dźwięku i narzędzie do odtwarzania na żywo
@@ -86,6 +86,7 @@ install -d $RPM_BUILD_ROOT%{_desktopdir}
 	DESTDIR=$RPM_BUILD_ROOT \
 	desktopdir=%{_desktopdir}
 
+mv -f $RPM_BUILD_ROOT%{_localedir}/es{_ES,}
 # useless (loaded through libgmodule by SONAME)
 rm -f $RPM_BUILD_ROOT%{_libdir}/sweep/lib*.{la,a}
 
