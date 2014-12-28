@@ -21,7 +21,7 @@ URL:		http://sweep.sourceforge.net/
 %{?with_alsa:BuildRequires:	alsa-lib-devel >= 1.0.0}
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gtk+-devel
 BuildRequires:	libsamplerate-devel >= 0.0.9
 BuildRequires:	libsndfile-devel >= 1.0.0
